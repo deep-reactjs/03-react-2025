@@ -1,8 +1,24 @@
-import logo from "./logo.svg";
+import { BrowserRouter, Route, Routes } from "react-router";
+import Layout from "./components/common/Layout";
+import Home from "./screens/Home";
+import Discover from "./screens/Discover";
+import Albums from "./screens/Albums";
+import Artists from "./screens/Artists";
+import NotFound from "./screens/NotFound";
 
 function App() {
   return (
-    <h1 className="font-bold text-center text-red-500">Hello Desire-React</h1>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/discover" element={<Discover />} />
+          <Route path="/albums" element={<Albums />} />
+          <Route path="/artists" element={<Artists />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
