@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useLocation, useNavigation, useParams } from "react-router";
+import { NavLink, useLocation } from "react-router";
 import Logo from "./Logo";
 import SIDEBAR_MENUS from "../../constant/data";
 import { twMerge } from "tailwind-merge";
