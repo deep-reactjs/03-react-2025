@@ -1,3 +1,7 @@
+# Design URL
+
+https://www.figma.com/design/JSFLEL1Rq6WpIFQ9pQjWLR/Music-Player-Website-%26-App-(Melodies)-(Community)?node-id=0-1&p=f&t=oaYMC8CiJF527owL-0
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
