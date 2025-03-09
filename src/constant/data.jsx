@@ -30,5 +30,6 @@ const SIDEBAR_MENUS = {
     },
   ],
 };
+export const NAVBAR_MENU = SIDEBAR_MENUS.menu.slice(1, 4);
 
 export default SIDEBAR_MENUS;
