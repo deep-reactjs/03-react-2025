@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         background: "#181818",
+        inputBg: "#1F1F1F",
         primary: {
           100: "#FDE7F7",
           200: "#FCDBF3",
