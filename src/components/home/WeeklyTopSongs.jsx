@@ -1,10 +1,15 @@
 import React from "react";
-import ItemCard from "./ItemCard";
+import SongsList from "../common/SongsList";
+import { WEEKLY_TOP_SONGS } from "../../constant/data";
 
 const WeeklyTopSongs = () => {
   return (
     <div>
-      <ItemCard />
+      <SongsList
+        text="Weekly Top"
+        highlightedText="Songs"
+        data={WEEKLY_TOP_SONGS}
+      />
     </div>
   );
 };

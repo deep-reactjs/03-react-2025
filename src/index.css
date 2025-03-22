@@ -7,6 +7,9 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
 }
+td {
+  @apply text-center;
+}
 body {
   @apply bg-background text-white h-screen overflow-y-auto;
 }
