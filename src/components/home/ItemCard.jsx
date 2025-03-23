@@ -1,6 +1,6 @@
 import React from "react";
 
-const ItemCard = () => {
+const ItemCard = ({ title, subTitle }) => {
   return (
     <div className="bg-inputBg px-4 py-1 w-min rounded-[10px] group cursor-pointer">
       <div className="space-y-3">
@@ -12,8 +12,15 @@ const ItemCard = () => {
           />
         </div>
         <div className="space-y-1">
-          <h4 className="text-white font-medium">Superman</h4>
-          <p className="text-xs text-white font-normal">Eminiem</p>
+          <h4 className="text-white font-medium line-clamp-1" title={title}>
+            {title}
+          </h4>
+          <p
+            className="text-xs text-white font-normal line-clamp-1"
+            title={subTitle}
+          >
+            {subTitle}
+          </p>
         </div>
       </div>
     </div>
