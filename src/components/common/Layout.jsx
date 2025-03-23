@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, useLocation } from "react-router";
 import Logo from "./Logo";
 import SIDEBAR_MENUS from "../../constant/data";
 import { twMerge } from "tailwind-merge";
+import Footer from "./Footer";
+import { IoMenu } from "react-icons/io5";
+import { CgClose } from "react-icons/cg";
 
 const Layout = ({ children }) => {
   const location = useLocation();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
-    <div className="container max-h-screen flex mx-auto overflow-hidden">
+    <div className="md:container max-h-screen md:flex mx-auto overflow-hidden">
       <div
         id="sidebar"
-        className="pl-16 no-scrollbar pr-8 py-12 border-r-2 h-screen overflow-auto border-primary-400 shadow-2xl shadow-primary-400/40 space-y-6"
+        className={`absolute ease-in-out duration-200 z-30 backdrop-blur-xl bg-black/30 md:translate-x-0 md:relative  pl-16 no-scrollbar pr-8 py-12 border-r-2 h-screen overflow-auto border-primary-400 shadow-2xl shadow-primary-400/40 space-y-6 ${
+          sidebarOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
+        <div
+          className="absolute md:hidden top-6 right-6 p-4"
+          onClick={() => setSidebarOpen(false)}
+        >
+          <CgClose />
+        </div>
         <Logo />
         {Object.keys(SIDEBAR_MENUS).map((menu, index) => {
           return (
@@ -56,9 +68,13 @@ const Layout = ({ children }) => {
       </div>
       <div
         id="layout"
-        className="flex-1 h-screen overflow-y-auto no-scrollbar p-12"
+        className="md:flex-1 h-screen overflow-y-auto no-scrollbar"
       >
-        {children}
+        <div className="fixed md:hidden" onClick={() => setSidebarOpen(true)}>
+          <IoMenu />
+        </div>
+        <div className="p-12">{children}</div>
+        <Footer />
       </div>
     </div>
   );
