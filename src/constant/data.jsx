@@ -188,5 +188,85 @@ export const MUSIC_VIDEO = [
     views: "2.3M",
   },
 ];
+export const FOOTER_LINKS = [
+  {
+    id: 1,
+    title: "Melodies",
+    links: [
+      {
+        id: 1,
+        title: "Songs",
+        url: "#",
+      },
+      {
+        id: 2,
+        title: "Radio",
+        url: "#",
+      },
+      {
+        id: 3,
+        title: "Podcast",
+        url: "#",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Access",
+    links: [
+      {
+        id: 1,
+        title: "Explor",
+        url: "#",
+      },
+      {
+        id: 2,
+        title: "Artists",
+        url: "#",
+      },
+      {
+        id: 3,
+        title: "Playlists",
+        url: "#",
+      },
+      {
+        id: 4,
+        title: "Albums",
+        url: "#",
+      },
+      {
+        id: 5,
+        title: "Trending",
+        url: "#",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Contact",
+    links: [
+      {
+        id: 1,
+        title: "About",
+        url: "#",
+      },
+      {
+        id: 2,
+        title: "Policy",
+        url: "#",
+      },
+      {
+        id: 3,
+        title: "Social Media",
+        url: "#",
+      },
+      {
+        id: 4,
+        title: "Soppurt",
+        url: "#",
+      },
+    ],
+  },
+];
 
 export default SIDEBAR_MENUS;
