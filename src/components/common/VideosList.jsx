@@ -9,7 +9,7 @@ const VideosList = ({ text, highlightedText, data }) => {
     <div className="space-y-3.5">
       <SectionHeading text={text} highlightedText={highlightedText} />
       <div className="max-w-full flex items-center overflow-auto gap-6">
-        <div className="flex items-center flex-wrap gap-6">
+        <div className="flex items-center md:flex-wrap gap-6">
           {data?.map((video, index) => (
             <VideoCard
               key={index + 1}
@@ -20,7 +20,7 @@ const VideosList = ({ text, highlightedText, data }) => {
             />
           ))}
         </div>
-        <button className="space-y-1 text-center cursor-pointer">
+        <button className="hidden md:block space-y-1 text-center cursor-pointer">
           <p className="h-16 w-16 rounded-full bg-stone-800 flex items-center justify-center">
             <IoAdd className="size-6" />
           </p>

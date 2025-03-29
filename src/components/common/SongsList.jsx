@@ -3,6 +3,7 @@ import SectionHeading from "./SectionHeading";
 import ItemCard from "../home/ItemCard";
 import { IoAdd } from "react-icons/io5";
 import { WEEKLY_TOP_SONGS } from "../../constant/data";
+import Button from "./Button";
 
 const SongsList = ({ text, highlightedText, data }) => {
   return (
@@ -12,7 +13,7 @@ const SongsList = ({ text, highlightedText, data }) => {
         {data?.map((song) => (
           <ItemCard key={song.id} title={song.name} subTitle={song.artist} />
         ))}
-        <button className="space-y-1 text-center cursor-pointer">
+        <button className="hidden md:block space-y-1 text-center cursor-pointer">
           <p className="h-16 w-16 rounded-full bg-stone-800 flex items-center justify-center">
             <IoAdd className="size-6" />
           </p>

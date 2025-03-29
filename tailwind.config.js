@@ -34,6 +34,11 @@ module.exports = {
           950: "#053754",
         },
       },
+      backgroundImage: {
+        "album-bg":
+          "linear-gradient(90deg, rgba(17, 113, 226, 0.8) 0%, rgba(139, 203, 231, 0.5) 100%)",
+        "artist-bg": "liner-gradient(0deg, #0C0B0B 100% 0%, #000000 2% 100%)",
+      },
     },
   },
   plugins: [],
