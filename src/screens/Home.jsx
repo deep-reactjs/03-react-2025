@@ -1,4 +1,5 @@
 import HeroSection from "../components/home/HeroSection";
+import JoinOurPlatform from "../components/home/JoinOurPlatform";
 import MoodPlaylist from "../components/home/MoodPlaylist";
 import MusicVideo from "../components/home/MusicVideo";
 import NewReleaseSongs from "../components/home/NewReleaseSongs";
@@ -16,6 +17,7 @@ const Home = () => {
       <MusicVideo />
       <TopAlbums />
       <MoodPlaylist />
+      <JoinOurPlatform />
     </div>
   );
 };

@@ -18,12 +18,12 @@ const Layout = ({ children }) => {
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div
+        {/* <div
           className="absolute md:hidden top-6 right-6 p-4"
           onClick={() => setSidebarOpen(false)}
         >
           <CgClose />
-        </div>
+        </div> */}
         <Logo />
         {Object.keys(SIDEBAR_MENUS).map((menu, index) => {
           return (
@@ -66,8 +66,11 @@ const Layout = ({ children }) => {
         id="layout"
         className="md:flex-1 h-screen overflow-y-auto no-scrollbar"
       >
-        <div className="fixed md:hidden" onClick={() => setSidebarOpen(true)}>
-          <IoMenu />
+        <div
+          className="fixed p-4 bg-primary-400 rounded-full top-2 left-2 z-30 md:hidden"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+        >
+          {sidebarOpen ? <CgClose /> : <IoMenu />}
         </div>
         <div className="p-6 md:p-12">{children}</div>
         <Footer />

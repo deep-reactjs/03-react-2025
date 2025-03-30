@@ -268,5 +268,14 @@ export const FOOTER_LINKS = [
     ],
   },
 ];
-
+export const AUTH_TABS = {
+  signIn: {
+    id: 1,
+    title: "Sign In",
+  },
+  signUp: {
+    id: 2,
+    title: "Sign Up",
+  },
+};
 export default SIDEBAR_MENUS;
