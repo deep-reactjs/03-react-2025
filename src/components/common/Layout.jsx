@@ -14,16 +14,16 @@ const Layout = ({ children }) => {
     <div className="md:container max-h-screen md:flex mx-auto overflow-hidden">
       <div
         id="sidebar"
-        className={`absolute ease-in-out duration-200 z-30 backdrop-blur-xl bg-black/30 md:translate-x-0 md:relative  pl-16 no-scrollbar pr-8 py-12 border-r-2 h-screen overflow-auto border-primary-400 shadow-2xl shadow-primary-400/40 space-y-6 ${
+        className={`absolute ease-in-out duration-200 z-30 backdrop-blur-xl bg-black/80 md:translate-x-0 md:relative  pl-16 no-scrollbar pr-8 py-12 border-r-2 h-screen overflow-auto border-primary-400 shadow-2xl shadow-primary-400/40 space-y-6 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div
+        {/* <div
           className="absolute md:hidden top-6 right-6 p-4"
           onClick={() => setSidebarOpen(false)}
         >
           <CgClose />
-        </div>
+        </div> */}
         <Logo />
         {Object.keys(SIDEBAR_MENUS).map((menu, index) => {
           return (
@@ -61,19 +61,18 @@ const Layout = ({ children }) => {
             </div>
           );
         })}
-        {/* <NavLink to="/">Home</NavLink>
-        <NavLink to="/albums">Albums</NavLink>
-        <NavLink to="/artists">Artists</NavLink>
-        <NavLink to="/discover">Discover</NavLink> */}
       </div>
       <div
         id="layout"
         className="md:flex-1 h-screen overflow-y-auto no-scrollbar"
       >
-        <div className="fixed md:hidden" onClick={() => setSidebarOpen(true)}>
-          <IoMenu />
+        <div
+          className="fixed p-4 bg-primary-400 rounded-full top-2 left-2 z-30 md:hidden"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+        >
+          {sidebarOpen ? <CgClose /> : <IoMenu />}
         </div>
-        <div className="p-12">{children}</div>
+        <div className="p-6 md:p-12">{children}</div>
         <Footer />
       </div>
     </div>
