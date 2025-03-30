@@ -19,7 +19,7 @@ const JoinOurPlatform = () => {
           <span className="text-secondary-400">Login button</span>.
         </p>
       </div>
-      <div className="p-6 bg-primary-950 w-full md:w-min rounded-xl md:max-w-[487px]">
+      <div className="p-6 bg-primary-950 w-full rounded-xl md:max-w-[487px]">
         <div className="flex items-center justify-center gap-4">
           {Object.keys(AUTH_TABS).map((key) => (
             <div
