@@ -1,3 +1,18 @@
+# Ref for figma designs:
+
+- https://www.figma.com/design/j3ffxsTTsWBfXMGLap15k3/Portfolio%7C-Personal-Portfolio-%7C-5%2B-(Community)?node-id=0-1&p=f&t=BS7H2k9CM8VqTWsy-0
+
+# Animations/components libs
+
+- https://gsap.com/showcase/?page=1
+- https://examples.motion.dev/
+- https://21st.dev/
+- https://ui.shadcn.com/
+
+# React interview questions
+
+- https://github.com/sudheerj/reactjs-interview-questions
+
 # Design URL
 
 https://www.figma.com/design/JSFLEL1Rq6WpIFQ9pQjWLR/Music-Player-Website-%26-App-(Melodies)-(Community)?node-id=0-1&p=f&t=oaYMC8CiJF527owL-0
