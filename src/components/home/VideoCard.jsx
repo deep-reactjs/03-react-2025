@@ -5,10 +5,16 @@ const VideoCard = ({ title, subTitle, count, image }) => {
     <div className="bg-inputBg p-2 w-36 md:w-72 rounded-md group cursor-pointer">
       <div className="space-y-1">
         <div className="w-full h-28 md:h-40 rounded-md overflow-hidden">
-          <img
-            alt="item"
-            src={image || "https://picsum.photos/200/300"}
-            className="group-hover:scale-110 ease-in-out duration-200"
+          <video
+            src={
+              image ||
+              "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
+            }
+            poster={"https://picsum.photos/200/300"}
+            preload="metadata"
+            muted
+            controls
+            className="h-full w-full object-cover group-hover:scale-110 ease-in-out duration-200"
           />
         </div>
         <div>
